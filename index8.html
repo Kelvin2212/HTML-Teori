@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>My Title</title>
+        <style>
+            .ilangin {
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Header</h1>
+        <a href="#">My link</a>
+        <button onclick="generate()">Generate</button>
+        <button onclick="remove()">Delete</button>
+        <ul id="list" class="ilangin"></ul>
+
+        <script>
+            function generate() {
+                const p = document.createElement('p');
+                p.innerHTML = "Lorem Ipsum";
+
+                document.body.appendChild(p);
+            }
+
+            var i = 0;
+            function generate() {
+                i += 1;
+
+                const li = document.createElement('li');
+                li.innerHTML = `Contoh ke-${i}`;
+
+                document.getElementById('list').appendChild(li);
+            }
+
+            function remove() {
+                if (i>0){
+                    i -= 1;
+
+                    const ul = document.getElementById('list');
+                    ul.removeChild(ul.lastElementChild);
+                }
+            }
+        </script>
+    </body>
+</html>

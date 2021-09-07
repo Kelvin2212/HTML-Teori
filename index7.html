@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
+      
+	<title>Kucing Coding || Project</title>
+    
+    <style>
+    	.feather {
+        	width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+<body>
+    <!--Navigation Bar Start-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!--Logo-->
+    	<a class="navbar-brand" href="/">
+        	<i data-feather="github"></i>
+        	Kucing Coding
+        </a>
+        <!--Membuat Tombol Navigation-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Membuat Per Content-->
+        	<ul class="navbar-nav mr-auto">
+                <!--Content 1-->
+            	<li class="nav-item"><a class="nav-link" href="#">
+                	<i data-feather="server"></i>
+                	Dashboard
+                </a></li>
+                <!--Content 2-->
+                <li class="nav-item"><a class="nav-link" href="#">
+                	<i data-feather="user"></i>
+                	Customers
+                </a></li>
+                <!--Content 3-->
+                <li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                        Products</a>
+                    <div class="dropdown-menu">
+                    	<a class="dropdown-item" href="#">Electronics</a>
+                        <a class="dropdown-item" href="#">Tools</a>
+                        <a class="dropdown-item" href="#">Equipment</a>
+                    </div>
+                </li>
+                <!--Content 4-->
+                <li class="nav-item"><a class="nav-link" href="#">Chats</a></li>
+                <!--Content 5-->
+                <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+            </ul>
+            <!--Search Bar-->
+            <form class="form-inline my-2 my-lg-0">
+            	<input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!--Navigation Bar Stop-->
+    
+    <!--Mambuat Container-->
+    <div class="container">
+        <!--Judul-->
+    	<h1 class="mt-3">Dashboard</h1>
+        <hr>
+        <!--Membuat Garis-->
+        <div class="row mb-4">
+            <!--Content Customers-->
+        	<div class="col-sm mx-3 px-5 py-3 border rounded">
+            	<div class="row">
+		        	<div class="col-sm">
+		            	<h5 class="my-2 text-primary">Customers</h5>
+    	                <h4 class="text-success">554</h4>
+                   	</div>
+                    <div class="col-sm text-right">
+		                <span class="material-icons" style="font-size: 84px">person</span>
+                    </div>
+                </div>
+            </div>
+            <!--Content Sales-->
+            <div class="col-sm mx-3 px-5 py-3 border rounded">
+            	<div class="row">
+		        	<div class="col-sm">
+		            	<h5 class="my-2 text-primary">Sales</h5>
+    	                <h4 class="text-success">$16,356</h4>
+                   	</div>
+                    <div class="col-sm text-right">
+		                <span class="material-icons" style="font-size: 84px">payments</span>
+                    </div>
+                </div>
+            </div>
+            <!--Content Performance-->
+            <div class="col-sm mx-3 px-5 py-3 border rounded">
+            	<div class="row">
+		        	<div class="col-sm">
+		            	<h5 class="my-2 text-primary">Performance</h5>
+    	                <h4 class="text-success">120%</h4>
+                   	</div>
+                    <div class="col-sm text-right">
+		                <span class="material-icons" style="font-size: 84px">show_chart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Content Invoice-->
+        <div class="row mb-4">
+        	<div class="col mx-3 p-2 border rounded">
+            	<h4 class="my-2">Invoice</h4>
+                <form>
+                <!--Membuat EMail Address-->
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                <!--Mambuat Password-->
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                <!--Membuat Tombol Submit-->
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!--Membuat Tabel-->
+        <div class="row mb-4">
+        	<div class="col mx-3">
+            	<h4 class="my-2">Customers</h4>
+                <table class="table" data-toggle="table" data-pagination="true" data-search="true">
+                <!--Membuat Headnya-->
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th data-sortable="true">First</th>
+                      <th data-sortable="true">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                <!--Membuat Isinya-->
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+
+	<script src="https://unpkg.com/feather-icons"></script>
+    <script>feather.replace()</script>
+</body>
+</html>
